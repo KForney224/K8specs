@@ -34,8 +34,7 @@ spec:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 10Gi
----
+      storage: 10Gi---
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
@@ -45,8 +44,7 @@ metadata:
     app: wordpress
 spec:
   selector:
-    matchLabels:
-      app: wordpress
+    matchLabels:      app: wordpress
       tier: mysql
   strategy:
     type: Recreate
@@ -80,7 +78,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: wordpress
-  namespace: master
+  namespace: kellyforney
   labels:
     app: wordpress
 spec:
@@ -95,7 +93,7 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: wordpress
-  namespace: master
+  namespace: kellyforney
   labels:
     app: wordpress
 spec:

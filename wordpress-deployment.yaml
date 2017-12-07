@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: mysql-pass
-  namespace: master
+  namespace: kellyforney
 type: Opaque
 data:
   password: d29yZHByZXNz
@@ -11,7 +11,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: wordpress-mysql
-  namespace: master
+  namespace: kellyforney
   labels:
     app: wordpress
 spec:
@@ -26,7 +26,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: mysql-pv-claim
-  namespace: master
+  namespace: kellyforney
   labels:
     app: wordpress
 spec:

@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: kforney-pv-1
+  name: kellyforney-pv-1
   labels:
     type: local
 spec:
@@ -10,10 +10,10 @@ spec:
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: /tmp/data/kforney-pv-1
+    path: /tmp/data/kellyforney-pv-1
 ---    
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: kforney
-  namespace: kforney
+  name: kellyforney
+  namespace: kellyforney
